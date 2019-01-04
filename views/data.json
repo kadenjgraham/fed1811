@@ -1,0 +1,61 @@
+{
+    "data": {
+        "users": {
+            "Tom1": {
+                "tasks": {
+                    "94e0254e-5c50-4fd1-3f3a-c97646441978": {
+                        "description": "Get more trashbags",
+                        "dateStart": "Sat Dec 15 2018 16:59:17 GMT-0500 (Eastern Standard Time)",
+                        "dateEnd": "Thu Dec 20 2018 16:59:17 GMT-0500 (Eastern Standard Time)",
+                        "timeStamp": "Sat Dec 15 2018 16:59:17 GMT-0500 (Eastern Standard Time)"
+                    }
+                },
+                "firstName": "Tom"
+            },
+            "Jeremy2": {
+                "tasks": {
+                    "b7b95e72-9c20-4843-5d66-374557f882bd": {
+                        "description": "Get more coffee",
+                        "dateStart": "Sun Dec 16 2018 16:59:17 GMT-0500 (Eastern Standard Time)",
+                        "dateEnd": "Fri Dec 21 2018 16:59:17 GMT-0500 (Eastern Standard Time)",
+                        "timeStamp": "Sun Dec 16 2018 16:59:17 GMT-0500 (Eastern Standard Time)"
+                    }
+                },
+                "firstName": "Jeremy"
+            },
+            "Dorothy3": {
+                "tasks": {
+                    "006a76f0-a4f5-479e-cd89-34e4075cc487": {
+                        "description": "Finish stylesheet",
+                        "dateStart": "Mon Dec 17 2018 16:59:17 GMT-0500 (Eastern Standard Time)",
+                        "dateEnd": "Sat Dec 22 2018 16:59:17 GMT-0500 (Eastern Standard Time)",
+                        "timeStamp": "Mon Dec 17 2018 16:59:17 GMT-0500 (Eastern Standard Time)"
+                    }
+                },
+                "firstName": "Dorothy"
+            },
+            "Don4": {
+                "tasks": {
+                    "980e32d2-fa0b-4373-0ef1-083332e2fa4a": {
+                        "description": "Start home page",
+                        "dateStart": "Tue Dec 18 2018 16:59:17 GMT-0500 (Eastern Standard Time)",
+                        "dateEnd": "Sun Dec 23 2018 16:59:17 GMT-0500 (Eastern Standard Time)",
+                        "timeStamp": "Tue Dec 18 2018 16:59:17 GMT-0500 (Eastern Standard Time)"
+                    }
+                },
+                "firstName": "Don"
+            },
+            "BossMan1": {
+                "tasks": {
+                    "05bd933a-8a13-4f7a-95e7-04a0716ab761": {
+                        "description": "Get new employees",
+                        "dateStart": "Wed Dec 19 2018 16:59:17 GMT-0500 (Eastern Standard Time)",
+                        "dateEnd": "Mon Dec 24 2018 16:59:17 GMT-0500 (Eastern Standard Time)",
+                        "timeStamp": "Wed Dec 19 2018 16:59:17 GMT-0500 (Eastern Standard Time)"
+                    }
+                },
+                "firstName": "Josh"
+            }
+        }
+    }
+}

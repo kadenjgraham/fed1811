@@ -1,0 +1,44 @@
+body {
+    background: lightgreen;
+}
+.taskTable {
+    display: flex;
+    justify-content: space-around;
+}
+
+td {
+    background: yellow;
+    border: 1px solid black;
+    padding: 10px;
+    width: 20%;
+}
+
+#loginForm {
+    color: white;
+    background: green;
+    border: 2px solid black;
+    padding: 5px;
+}
+
+#logoutForm {
+    background: black;
+    border: 2px solid red;
+    padding: 5px;
+    width: 60px;
+}
+
+#Logout {
+    background: red;
+}
+
+@media only screen and (max-width: 768px) {
+    td {
+        background: lightgray;
+        border: 1px solid black;
+        padding: 2px;
+        width: 15%;
+    }
+    .taskTable {
+        justify-content: left;
+    }
+}

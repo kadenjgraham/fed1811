@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../syles.css" rel="stylesheet">
+    <title>Employee Task View</title>
+</head>
+
+<body>
+    <div ng-app="taskApp">
+        <div ng-controller="main">
+            <form id="loginForm" ng-show="logout">
+                Log In:<br><br>
+                <input type="text" , id="loginInfo" , ng-model="userName">
+                <input ng-click="getUserData(userName)" type="button" , value="Login" , id="Login">
+            </form>
+            <form id="logoutForm" ng-show="login">
+                <input type="button" , value="Logout" , id="Logout" ng-click="logoutForm()">
+            </form>
+            <form ng-show="admin">
+                Choose Employee:
+                <select ng-model="inputName" required>
+                    <option ng-repeat="user in adminTaskArr">{[{user.firstName}]}</option>
+                </select>
+                Task:
+                <input type="text" ng-model="taskDesc" required>
+                Start Date:
+                <input type="date" ng-model="startDate" required>
+                Due Date:
+                <input type="date" ng-model="endDate" required>
+                <input type="button" , value="Submit" ng-click="newTaskSubmit(inputName, taskDesc, startDate, endDate)"
+                    ng-show="!editting">
+                <input type="button" value="Update" ng-click="updateDatabase(inputName, taskDesc, startDate, endDate, editID)"
+                    ng-show="editting">
+            </form>
+            <table class="taskTable" id="adminTaskTable" ng-repeat="user in adminTaskArr" ng-show="admin">
+                <tr>
+                    <th>Name</th>
+                    <th>Task</th>
+                    <th>Start Date</th>
+                    <th>Due Date</th>
+                </tr>
+                <tr ng-repeat="task in user.tasks">
+                    <td>{[{user.firstName}]}</td>
+                    <td>{[{task.description}]}</td>
+                    <td>{[{task.dateStart}]}</td>
+                    <td>{[{task.dateEnd}]}</td>
+                    <td><input type="button" , value="Delete" ng-click="deleteData(user.firstName, task.id)"><input
+                            type="button" , value="Edit" ng-click="editData(user.firstName, task.description, task.dateStart, task.dateEnd, task.id)"></td>
+                </tr>
+            </table>
+            <table class="taskTable" id="employeeTaskTable" ng-model="employeeTable" ng-show="employee">
+                <tr>
+                    <th>Name</th>
+                    <th>Task</th>
+                    <th>Start Date</th>
+                    <th>Due Date</th>
+                </tr>
+                <tr ng-repeat="task in taskArr.tasks">
+                    <td>{[{taskArr.firstName}]}</td>
+                    <td>{[{task.description}]}</td>
+                    <td>{[{task.dateStart}]}</td>
+                    <td>{[{task.dateEnd}]}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.5/angular.min.js"></script>
+    <script src="../app.js"></script>
+</body>
+
+</html>
