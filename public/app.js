@@ -1,4 +1,5 @@
 let app = angular.module('taskApp', []);
+//change the way this is seen in home file
 app.config(function($interpolateProvider) {
     $interpolateProvider.startSymbol('{[{');
     $interpolateProvider.endSymbol('}]}');
