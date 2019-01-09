@@ -1,8 +1,18 @@
+require('./config/config');
+
+var {mongoose} = require('./db/mongoose');
+
 const express = require('express');
 const hbs = require('hbs');
+
+var {Task} = require('./models/tasks');
+
 let serverApp = express();
-const port = process.env.PORT || 3000;
-serverApp.use(express.static(`${__dirname}/public`));
+
+serverApp.use(cors());
+serverApp.options('*', cors());
+const port = process.env.PORT;
+
 serverApp.get('/', (req, res) => {
     res.render('home.hbs', {
 
