@@ -18,7 +18,7 @@ serverApp.use(cors());
 serverApp.options('*', cors());
 const port = process.env.PORT;
 
-serverApp.get('/tasks', (req, res) => {
+serverApp.get('/ToDo', (req, res) => {
     Task.find().then((allTasks) => {
         res.send(allTasks);
     }, (e) => {
@@ -26,7 +26,7 @@ serverApp.get('/tasks', (req, res) => {
     })
 });
 
-serverApp.post('/tasks', (req, res) => {
+serverApp.post('/ToDo', (req, res) => {
     let task = new Task({
         taskName: req.body.taskName
     });
@@ -38,7 +38,7 @@ serverApp.post('/tasks', (req, res) => {
     });
 });
 
-serverApp.delete('/tasks/:id', (req, res) => {
+serverApp.delete('/ToDo/:id', (req, res) => {
     let id = req.params.id;
 
     if (!ObjectID.isValid(id)) {
@@ -57,7 +57,7 @@ serverApp.delete('/tasks/:id', (req, res) => {
     });
 });
 
-serverApp.patch('/tasks/:id', (req, res) => {
+serverApp.patch('/ToDo/:id', (req, res) => {
     let id = req.params.id;
     // console.log(req.body);
     let body = {
