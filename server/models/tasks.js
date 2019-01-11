@@ -1,21 +1,31 @@
 var mongoose = require('mongoose');
 
-var Task = mongoose.model('Tasks', {
+var Task = mongoose.model('ToDo', {
     taskName: {
         type: String,
         required: true,
         minlength: 5, 
         trim: true
     },
-    completed: {
-        type: Boolean, 
-        default: false
+    employeeName: {
+        type: String,
+        required: true, 
+        trim: true
+    },
+    username: {
+        type: String,
+        required: true, 
+        trim: true
+    },
+    start: {
+        type: Number, 
+        default: null
     }, 
-    completedAt: {
+    end: {
         type: Number, 
         default: null
     }
-}, 'Tasks');
+}, 'ToDo');
 
 module.exports = {
     Task
